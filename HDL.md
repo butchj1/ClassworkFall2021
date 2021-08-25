@@ -1,3 +1,3 @@
 # HDL
 
-HDL is hight density blah blah blah
+HDL is hight density blah blah
