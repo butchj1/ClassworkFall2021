@@ -5,12 +5,16 @@ def interface():
     keep_running = True
     while keep_running:
         print("Make a choice")
+        print("1 - HDL")
+        print("2 - LDL")
         print("9 - Quit")
         choice = int(input("Make a choice: "))
         if choice == 9:
             keep_running = False
         elif choice == 1:
-            HDL_Driver()      
+            HDL_Driver() 
+        elif choice == 2:
+            LDL_Driver
     print(choice)
     return(choice)
 
@@ -34,5 +38,6 @@ def HDL_analysis(HDL_value):
 def hdl_output(HDL_value, HDL_answer):
     print("The HDL value of {} is considered {}".format(HDL_value, HDL_answer))
     return   
-    
-interface()
+
+if __name__ == "__main__"
+    interface()
