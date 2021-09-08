@@ -1,6 +1,8 @@
 # Health Database
 
+## Author Information
 Author: Jimmy Butch
+
 Fall 2021
 
 ## Specifications
