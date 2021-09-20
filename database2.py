@@ -1,6 +1,6 @@
 def create_database_entry(patient_name, id_no, age):
-    new_patient = ["name": patient_name, "id_no": id_no, 
-                    "age": age, "tests":, []"]
+    new_patient = {"name": patient_name, "id_no": id_no, 
+                    "age": age, "tests": []}
     return new_patient
 
 
@@ -11,15 +11,15 @@ def print_database(db):
 
 
 def main():
-    db = []
+    db = {}
     x = create_database_entry("Ann Ables", 1, 30)
-    db.append(x)
+    db[x["id_no"]] = x
     x = create_database_entry("Bob Byles", 2, 31)
-    db.append(x)
+    db[x["id_no"]] = x
     x = create_database_entry("Chris Chou", 3, 33)
-    db.append(x)
+    db[x["id_no"]] = x
     x = create_database_entry("David Dinkins", 4, 34)
-    db.append(x)
+    db[x["id_no"]] = x
     print(db)
     
     patient_id_tested = 24
@@ -27,19 +27,24 @@ def main():
     
     patient = get_patient(db, patient_id_tested)
     patient["tests"].append(test_done)
-    
+    print(db)
     
     print_database(db)
-    
+
+
 def print_patients_over_age(age, db):
     for patient in db:
         if patient[2] > age:
             print(patient[0])
-            
+
+
 def get_patient(db, id_no):
-    for patient in db:
-        if patient["id_no"] == id_no:
-            return patient
+    patient = db[id_no]
+    #for patient in db:
+      #  if patient["id_no"] == id_no:
+       #     return patient
+    return patient
+
             
 if __name__ == "__main__":
     main()
