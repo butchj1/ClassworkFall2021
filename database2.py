@@ -1,3 +1,20 @@
+class Patient:
+
+    def __init__(self, input_name, id_no, age):
+        self.name = name
+        self.id_no = id_no
+        self.age = age
+        self.tests = []
+        
+        
+def class_work():
+    new_patient = Patient("Ann Ables", 120, 36)
+    print(new_patient.id_no)
+    print(new_patient.name)
+    x = Patient("Bob Boyes", 24, 33)
+    print(x.name)
+
+
 def create_database_entry(patient_name, id_no, age):
     new_patient = {"name": patient_name, "id_no": id_no, 
                     "age": age, "tests": []}
@@ -11,6 +28,9 @@ def print_database(db):
 
 
 def main():
+    class_work()
+    return
+    
     db = {}
     x = create_database_entry("Ann Ables", 1, 30)
     db[x["id_no"]] = x
@@ -34,7 +54,7 @@ def main():
 
 def print_patients_over_age(age, db):
     for patient in db:
-        if patient[2] > age:
+        if patient["age"] > age:
             print(patient[0])
 
 
