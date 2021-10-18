@@ -1,3 +1,6 @@
 # requirements
 pytest
 pytest-pycodestyle
+requests
+flask
+
