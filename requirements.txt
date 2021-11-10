@@ -3,4 +3,5 @@ pytest
 pytest-pycodestyle
 requests
 flask
+Pillow
 
